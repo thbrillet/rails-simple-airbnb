@@ -1,0 +1,12 @@
+<h1>Flats#show</h1>
+<p>Find me in app/views/flats/show.html.erb</p>
+
+<h1><%= @flat.name %></h1>
+<h3><%= @flat.description %></h3>
+<p><%= @flat.address %></p>
+<p><%= @flat.price_per_night %> € per night</p>
+<p>This flat can welcome up to <%= @flat.number_of_guests %> guests</p>
+
+<p> <%= link_to 'Edit this flat card', edit_flat_path(@flat) %> </p>
+<p> <%= link_to 'Destroy this flat card', @flat, method: :delete, data: {confirm: "Are you sure ?"} %> </p>
+<p> <%= link_to 'Return to index', flats_path %> </p>
